@@ -1,0 +1,33 @@
+{
+  "type": "APL",
+  "version": "1.5",
+  "mainTemplate": {
+    "parameters": [
+      "payload"
+    ],
+    "items": [
+      {
+        "type": "Container",
+        "id": "autoscrollDemo",
+        "items": [
+          {
+            "type": "Text",
+            "bind": [
+              {
+                "name": "textToAutoscroll",
+                "type": "string",
+                "value": "Autoscroll from right to left"
+              }
+            ],
+            "text": "${String.slice(textToAutoscroll,Time.milliseconds(localTime/100)%(String.length(textToAutoscroll)))}",
+            "fontSize": "70dp",
+            "position": "absolute",
+            "top": "40vh"
+          }
+        ],
+        "height": "100%",
+        "width": "100%"
+      }
+    ]
+  }
+}
