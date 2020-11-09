@@ -1,15 +1,6 @@
 {
   "type": "APL",
   "version": "1.4",
-  "settings": {},
-  "theme": "dark",
-  "import": [],
-  "resources": [],
-  "styles": {},
-  "onMount": [],
-  "graphics": {},
-  "commands": {},
-  "layouts": {},
   "mainTemplate": {
     "parameters": [
       "payload"
@@ -25,11 +16,11 @@
               {
                 "name": "textToAutoscroll",
                 "type": "string",
-                "value": "Hello locale 'en-US': In European languages we have some characters that may seem special to you but which are normal to us: It turns out that this APL will crash when String.slice() reaches one of the the letters äöü"
+                "value": "Autoscroll from right to left"
               }
             ],
-            "text": "${String.slice(textToAutoscroll,Time.milliseconds(localTime/100)%(218))}",
-            "fontSize": "10dp",
+            "text": "${String.slice(textToAutoscroll,Time.milliseconds(localTime/100)%(29))}",
+            "fontSize": "70dp",
             "position": "absolute",
             "top": "45vh"
           }
